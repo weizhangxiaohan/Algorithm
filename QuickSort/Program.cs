@@ -16,5 +16,29 @@ namespace QuickSort
             Util.ArrayHelper.print<int>(array);
             Console.ReadKey();
         }
+
+        static void QuickSort(int[] array,int low,int high) 
+        {
+            if(low < high)
+            {
+                int privotLocation = partition(array, low, high);
+                QuickSort(array, low, privotLocation-1);
+                QuickSort(array, privotLocation +1, high);
+            }
+        }
+
+
+        static int partition(int[] array,int low,int high) 
+        {
+            int privoKey = array[low];
+            return 0;
+        }
+
+        static void swap(int a,int b) 
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
     }
 }
